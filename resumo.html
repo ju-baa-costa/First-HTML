@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+    }
+    h1 {
+        font-size: 50px;
+        color: deeppink;
+    }
+    main{
+        background-color: bisque;
+        margin: 0px;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    #menu1 a {
+        display: inline;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        background-color: deeppink;
+        padding: 8px;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+    #menu1 a:hover{
+        font-size: 30px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: deeppink;
+        padding: 8px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    @media (max-width: 600px) {
+    #menu1 a {
+        font-size: 16px; 
+        padding: 6px 4px; 
+        margin-right: 3px; 
+    }
+    #menu1 a:hover{
+        font-size: 16px; 
+        padding: 6px 4px; 
+        margin-right: 3px; 
+        color: white;
+    }
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 7px;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Primeiros passos com HTML</h1>
+        <div id="menu1">
+            <a href="#estrutura">Estrutura do arquivo </a>
+            <a href="#tags">Tags </a>
+            <a href="#atributos">Atributos das tags </a>
+            <a href="#midia">Mídias </a>
+            <a href="#tabelas">Tabelas </a>
+            <a href="#forms">Formulários </a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <header id="estrutura">Estrutura do arquivo</header>
+            <p> Um arquivo HTML é a estrutura do site, portanto, se deve criar um plano, levando em conta as partes mais externas para internas desse site, e então dividindo cada grande seção em partes menores e menores, e as principais tags utilizadas para isso são header(cabeçalho), main(parte principal do site) e footer(rodapé). Existem especificidades para cada uma dessas, mas isso será abordado no tópico <a href="#tags">Tags</a></p>
+        </article>
+        <article>
+            <header id="tags">Tags</header>
+            <p> Existem inúmeras tags no html, sendo as principais, div, header, footer, main, article, p, h1, h2... E cada uma delas tem sua particularidade, por exemplo, pode haver apenas uma main por página, a tag div toma todo o espaço horizontal da página, e muito mais!<br> Aqui vai o link do site da <a href="https://www.w3schools.com/html/default.asp">W3schools</a> , onde você pode ler e estudar mais sobre as tags do html.</p>
+        </article>
+        <article>
+            <header id="atributos">Atributos</header>
+            <p> Para facilitar a organização, estilização e indexação do seu site, existem diversos atributos que podem ser adicionados em cada tag, como por exemplo, o id e class. Além disso, tags específicas precisam de atributos específicos para funcionar, como a tag "a", que adiciona um link, apenas quando esse é inserido no atributo "href", ou a tag "img" que apenas adiciona a imagem ao site, quando o arquivo escolhido está inserido no atributo "src".<br>    Algo importante de lembrar é que com o HTML5, alguns atributos, principalmente de estilização, não tem uso recomendado, uma vez que o papel de gerenciar a parte estética do site, recaí totalmente sobre o CSS.</p>
+        </article>
+        <article>
+            <header id="midia">Midia</header>
+            <p>Diversos tipos de arquivo podem ser adicionados em seu site, como:</p>
+            <ul>
+                <li>Imagens, com a tag "img";</li>
+                <li>Áudios, com a tag "audio";</li>
+                <li>Vídeos, com a tag "video";</li>
+                <li>Outras páginas web, com a tag "iframe";</li>
+            </ul>
+            <p> Todas essas tags dependem do atributo scr para funcionarem, e nele, é colocado o caminho para, ou o link da, mídia escolhida<br>    Além disso, é necessário ter atenção quanto a acessibilidade do seu site, utilizando atributos como:</p>
+            <ol>
+                <li>Descrições de imagens;</li>
+                <li>Legendas em vídeos;</li>
+                <li>Tag figure, que agrupa todos os elementos referentes a uma imagem, como legenda, descrição e outros, em apenas um bloco semanticamente, o ue permite que leitores de tela possam passar essas iformações a seus usuários de forma mais precisa, assim melhorando a acessibilidade de seu site!</li>
+            </ol>
+        </article>
+        <article>
+            <header id="tabelas">Tabelas no HTML</header>
+            <p> As tabelas, funcionam da mesma forma que no excel, sendo formadas por linhas e colunas, e tendo seu encontro chamado de células. No html, a tag "table" a que inicia uma tabela, sendo seguida das tags "tr" (table row/linha), que podem conter tanto as células de cabeçalho "th" ou de dados comuns "td". A quantidade de elementos th/td, definem quantas colunas a tabela terá, enquanto os elementos tr, definem a quantidade de linhas. <br> A estilização das tabelas pode ser feita por meio do CSS, com adição de bordas, cores, elementos interativos e muito mais.<br>  É também importante se atentar à acessibilidade das tabelas, que pode ser melhorada por meio da tag "summary".</p>
+        </article>
+        <article>
+            <header id="forms">Formulários</header>
+            <p> Formulários são ferramentas especialmente úteis para coletar dados dos usuários, e são amplamente utilizados pela web. Para criá-los, existem tags específicas: "form", que cria o formulário e "input" que cria um campo de entrada de dados. A tag input tem o atribito "type" no qual se seleciona o tipo de dado que quer ser recebido, dentre eles temos:</p>
+            <ul>
+                <li>number, podendo também er atributos de mínimo e máximo aceito;</li>
+                <li>text, que recebe textos pequenos;</li>
+                <li>textarea, sendo possível adicionar textos maiores;</li>
+                <li>range, que cria uma barra com um controle deslizante sobre ela, permitindo que o usuário escolha um valor dentre seu intervalo;</li>
+                <li>color, disponibiliza um seletor de cor ao usuário;</li>
+                <li>email, requer que um email válido seja enviado;</li>
+                <li>url, da mesma forma que o email, exige um link válido;</li>
+                <li>date, que permite que seja selecionada uma data;</li>
+                <li>checkbox, adiciona elementos com caixas seletoras, podendo ser chekcados nenhum, um, ou mais deles;</li>
+                <li>radio, cria elementos diversos, mas apenas um pode ser selecionado pelo usuário;</li>
+                <li>file, permite que o usuário envie arquivos de diversos tipos;</li>
+                <li>button, normalmente usado para fazer o envio do formulário, ou resetá-lo;</li>
+            </ul>
+            <p>Para que os dados sejam manipulados, é possível utilizar javascript, e para estilizar o formulário, o CSS é a ferramenta certa!</p>
+
+        </article>
+    </main>
+</body>
+
+</html>
